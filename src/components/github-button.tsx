@@ -6,6 +6,7 @@ import { auth } from "../firebase";
 
 const Button = styled.span`
 	background-color: white;
+	color: black;
 	font-weight: 600;
 	margin-top: 50px;
 	padding: 10px 20px;
@@ -36,7 +37,7 @@ export default function GithubButton() {
 	return (
 		<Button onClick={onClick}>
 			<Logo src="/github-logo.svg" />
-			Continut with Github
+			Continue with Github
 		</Button>
 	);
 }
