@@ -28,6 +28,10 @@ const router = createBrowserRouter([
 				element: <Home />,
 			},
 			{
+				path: "logout",
+				element: <Home />,
+			},
+			{
 				path: "profile",
 				element: <Profile />,
 			},

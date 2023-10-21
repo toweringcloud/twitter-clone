@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
+import { auth } from "../firebase";
 import { FirebaseError } from "firebase/app";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
 
 import {
 	Error,
@@ -15,9 +15,9 @@ import {
 } from "../components/auth-components";
 import GithubButton from "../components/github-button";
 
-const errors = {
-	"auth/wrong-password": "Wrong password.",
-};
+// const errors = {
+// 	"auth/wrong-password": "Wrong password.",
+// };
 
 export default function Login() {
 	const navigate = useNavigate();

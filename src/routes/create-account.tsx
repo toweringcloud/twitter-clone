@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { auth } from "../firebase";
 import { FirebaseError } from "firebase/app";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from "../firebase";
 
 import {
 	Error,
@@ -14,9 +14,9 @@ import {
 } from "../components/auth-components";
 import GithubButton from "../components/github-button";
 
-const errors = {
-	"auth/email-already-in-use": "That email already exists.",
-};
+// const errors = {
+// 	"auth/email-already-in-use": "That email already exists.",
+// };
 
 export default function CreateAccount() {
 	const navigate = useNavigate();
