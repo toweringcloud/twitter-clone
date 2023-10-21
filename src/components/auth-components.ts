@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const Wrapper = styled.div`
 	height: 100%;
 	width: 420px;
-	dispaly: flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 50px 0px;
@@ -29,6 +29,7 @@ export const Input = styled.input`
 	border-radius: 50px;
 	border: none;
 	&[type="submit"] {
+		background-color: #CED46A;
 		cursor: pointer;
 		&:hover {
 			opacity: 0.8;

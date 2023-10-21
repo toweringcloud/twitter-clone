@@ -60,7 +60,7 @@ export default function Login() {
 
 	return (
 		<Wrapper>
-			<Title>Log into X</Title>
+			<Title>Login - English Tweet</Title>
 			<Form onSubmit={onSubmit}>
 				<Input
 					onChange={onChange}

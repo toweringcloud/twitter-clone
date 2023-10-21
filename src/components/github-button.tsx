@@ -5,8 +5,8 @@ import { GithubAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../firebase";
 
 const Button = styled.span`
-	background-color: white;
-	color: black;
+	background-color: #CED46A;
+	color: #07553B;
 	font-weight: 600;
 	margin-top: 50px;
 	padding: 10px 20px;

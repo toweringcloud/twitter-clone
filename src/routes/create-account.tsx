@@ -70,7 +70,7 @@ export default function CreateAccount() {
 
 	return (
 		<Wrapper>
-			<Title>Join X</Title>
+			<Title>Join - English Tweet</Title>
 			<Form onSubmit={onSubmit}>
 				<Input
 					onChange={onChange}
