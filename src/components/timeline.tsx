@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 
 import { db } from "../firebase";
+import { Unsubscribe } from "firebase/auth";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 
 import Tweet from "./tweet";
-import { Unsubscribe } from "firebase/auth";
 
 const Wrapper = styled.div`
 	display: flex;
@@ -31,19 +31,6 @@ export default function Timeline() {
 				collection(db, "tweets"),
 				orderBy("createdAt", "desc")
 			);
-			// const snapshot = await getDocs(tweetsQuery);
-			// const tweets = snapshot.docs.map((doc) => {
-			// 	const { tweet, createdAt, userId, username, photo } = doc.data();
-			// 	return {
-			// 		tweet,
-			// 		createdAt,
-			// 		userId,
-			// 		username,
-			// 		photo,
-			// 		id: doc.id,
-			// 	};
-			// });
-			// setTweets(tweets);
 			unsubscribe = await onSnapshot(tweetsQuery, (snapshot) => {
 				const tweets = snapshot.docs.map((doc) => {
 					const { tweet, createdAt, userId, username, photo } =
