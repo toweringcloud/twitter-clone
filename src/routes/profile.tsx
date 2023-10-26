@@ -66,7 +66,9 @@ export default function Profile() {
 				const result = await uploadBytes(locationRef, file);
 				const avatarUrl = await getDownloadURL(result.ref);
 				setAvatar(avatarUrl);
-				await updateProfile(user, { photoURL: avatarUrl });
+				if (user) {
+					await updateProfile(user, { photoURL: avatarUrl });
+				}
 			} else {
 				console.log(`file size more than 1MB : ${file.size}`);
 			}
@@ -103,7 +105,7 @@ export default function Profile() {
 	return (
 		<Wrapper>
 			<AvatarUpload htmlFor="avatar">
-				{Boolean(avatar) ? (
+				{avatar ? (
 					<AvatarImg src={avatar} />
 				) : (
 					<svg

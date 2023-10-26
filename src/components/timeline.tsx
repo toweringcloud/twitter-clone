@@ -14,7 +14,9 @@ const Wrapper = styled.div`
 `;
 
 export interface ITweet {
-	photo: string;
+	id: string;
+	photo?: string;
+	tweet: string;
 	userId: string;
 	username: string;
 	createdAt: number;
