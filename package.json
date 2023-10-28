@@ -1,7 +1,20 @@
 {
 	"name": "nwitter-reloaded-challenge",
-	"private": true,
-	"version": "0.0.0",
+	"version": "0.1.0",
+	"description": "vanillajs chrome web accessories",
+	"license": "MIT",
+	"author": "toweringcloud",
+	"homepage": "https://github.com/toweringcloud/twitter-clone",
+	"inspiredby": "https://nomadcoders.co/nwitter",
+	"keywords": [
+		"typescript",
+		"react",
+		"firebase",
+		"twitter",
+		"oidc",
+		"timeline",
+		"profile"
+	],
 	"type": "module",
 	"scripts": {
 		"dev": "vite",

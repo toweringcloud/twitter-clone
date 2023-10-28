@@ -131,4 +131,4 @@ dist
 
 # etc
 package-lock.json
-.firebase/*
+.firebase
