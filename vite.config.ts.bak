@@ -1,0 +1,30 @@
+import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vite";
+import { dependencies } from "./package.json";
+
+//https://sambitsahoo.com/blog/vite-code-splitting-that-works.html
+const reactDeps = Object.keys(dependencies).filter(
+	(key) => key === "react" || key.startsWith("react-")
+);
+const manualChunks = {
+	vendor: reactDeps,
+	...Object.keys(dependencies).reduce((chunks, name) => {
+		if (!reactDeps.includes(name)) {
+			chunks[name] = [name];
+		}
+		return chunks;
+	}, {}),
+};
+
+export default defineConfig({
+	base: "/xtwitter-clone",
+	build: {
+		sourcemap: false,
+		rollupOptions: {
+			output: {
+				manualChunks,
+			},
+		},
+	},
+	plugins: [react()],
+});

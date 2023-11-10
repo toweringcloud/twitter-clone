@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+	base: "/xtwitter-clone",
+	build: { chunkSizeWarningLimit: 1024 },
+	plugins: [react()],
+});

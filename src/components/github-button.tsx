@@ -5,8 +5,8 @@ import { GithubAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../firebase";
 
 const Button = styled.span`
-	background-color: #CED46A;
-	color: #07553B;
+	background-color: #ced46a;
+	color: #07553b;
 	font-weight: 600;
 	margin-top: 50px;
 	padding: 10px 20px;
@@ -36,7 +36,7 @@ export default function GithubButton() {
 	};
 	return (
 		<Button onClick={onClick}>
-			<Logo src="/github-logo.svg" />
+			<Logo src={`${import.meta.env.VITE_BASE_NAME}/github-logo.svg`} />
 			Continue with Github
 		</Button>
 	);

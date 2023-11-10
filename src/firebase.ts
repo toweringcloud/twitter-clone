@@ -9,10 +9,10 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyDq3IozZH2o-8gy42OQ3ANlpNOE63aDcM8",
-	authDomain: "nwitter-reloaded-6f54d.firebaseapp.com",
-	projectId: "nwitter-reloaded-6f54d",
-	storageBucket: "nwitter-reloaded-6f54d.appspot.com",
+	apiKey: import.meta.env.VITE_API_KEY,
+	projectId: import.meta.env.VITE_PROJECT,
+	authDomain: `${import.meta.env.VITE_PROJECT}.firebaseapp.com`,
+	storageBucket: `${import.meta.env.VITE_PROJECT}.appspot.com`,
 	messagingSenderId: "503758695436",
 	appId: "1:503758695436:web:4730d658fa003f7fda5229",
 };

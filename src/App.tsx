@@ -14,38 +14,41 @@ import CreateAccount from "./routes/create-account";
 
 import { auth } from "./firebase";
 
-const router = createBrowserRouter([
-	{
-		path: "/",
-		element: (
-			<ProtectedRoute>
-				<Layout />
-			</ProtectedRoute>
-		),
-		children: [
-			{
-				path: "",
-				element: <Home />,
-			},
-			{
-				path: "logout",
-				element: <Home />,
-			},
-			{
-				path: "profile",
-				element: <Profile />,
-			},
-		],
-	},
-	{
-		path: "/login",
-		element: <Login />,
-	},
-	{
-		path: "/create-account",
-		element: <CreateAccount />,
-	},
-]);
+const router = createBrowserRouter(
+	[
+		{
+			path: "/",
+			element: (
+				<ProtectedRoute>
+					<Layout />
+				</ProtectedRoute>
+			),
+			children: [
+				{
+					path: "",
+					element: <Home />,
+				},
+				{
+					path: "logout",
+					element: <Home />,
+				},
+				{
+					path: "profile",
+					element: <Profile />,
+				},
+			],
+		},
+		{
+			path: "/login",
+			element: <Login />,
+		},
+		{
+			path: "/create-account",
+			element: <CreateAccount />,
+		},
+	],
+	{ basename: import.meta.env.VITE_BASE_NAME }
+);
 
 const GlobalStyles = createGlobalStyle`
   ${reset};
